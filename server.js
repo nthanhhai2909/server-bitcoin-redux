@@ -36,7 +36,7 @@ app.use(Passport.initialize());
 app.use(Passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(cors());
-app.use(cors({credentials: true, origin: 'http://localhost:3001'}));
+app.use(cors({credentials: true, origin: 'https://bitcoin-redux.herokuapp.com/'}));
 
 Passport.use(new LocalStrategy(
     (username, password, done) => {
