@@ -4,6 +4,9 @@ module.exports = function(app, Passport){
     app.route('/login')
         .post(Passport.authenticate('local', {failureRedirect: '/loginFail', successRedirect: '/loginOK'}));
 
+    app.route('/logup')
+    .post(userController.logup);
+    
     app.route('/userSendMoney')
     .put(userController.userSendMoney);
     
